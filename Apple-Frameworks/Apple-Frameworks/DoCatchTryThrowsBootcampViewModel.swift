@@ -20,12 +20,23 @@ class DoCatchTryThrowsBootcampViewModel: ObservableObject {
  
     func fetchTitle() {
         let newTitle = manager.getTitle()
+        print("New Title: \(newTitle)")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.text = "New Title Fetched! \(self.getCurrentDateFormatted())"
+            }
+    }
+    
+    func getCurrentDateFormatted() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy \n hh:m:ss" // Desired format
+        let currentDate = Date()
+        return dateFormatter.string(from: currentDate)
     }
 }
 
-
 struct DoCatchTryThrowsBootcamp: View {
     @StateObject private var viewModel = DoCatchTryThrowsBootcampViewModel()
+   
     
     var body: some View {
         Text(viewModel.text)
@@ -33,10 +44,10 @@ struct DoCatchTryThrowsBootcamp: View {
             .background(Color.green)
             .onTapGesture {
                 viewModel.fetchTitle()
+                print("tapped")
             }
     }
 }
-
 
 #Preview {
     DoCatchTryThrowsBootcamp()

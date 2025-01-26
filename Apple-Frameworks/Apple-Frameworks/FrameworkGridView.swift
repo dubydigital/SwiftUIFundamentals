@@ -11,14 +11,12 @@ import Foundation
 struct FrameworkGridView: View {
     
     @StateObject var viewModel = FrameworkGridViewModel()
-    
     let columns: [GridItem] = [GridItem(.flexible()),
                                GridItem(.flexible()),
                                GridItem(.flexible())
     ]
     
     var body: some View {
-        
         NavigationView{
             ScrollView {
                 LazyVGrid(columns: columns ){
@@ -37,7 +35,6 @@ struct FrameworkGridView: View {
 //                                    isShowingDetailView: $viewModel.isShowingDetailView)
             })
         }
-        
     }
 }
 

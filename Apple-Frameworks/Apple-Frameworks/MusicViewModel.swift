@@ -10,13 +10,14 @@ import SwiftUI
 
 struct MusicItem:  Identifiable, Decodable {
     let id = UUID() // For SwiftUI List
+    let trackId: Int
     let trackName: String
     let artistName: String
     let artworkUrl100: String // 100x100 album art URL
     
     private enum CodingKeys: String, CodingKey {
-            case trackName, artistName, artworkUrl100 // No "id" here
-        }
+        case trackId, trackName, artistName, artworkUrl100// No "id" here
+    }
 }
 
 class MusicViewModel: ObservableObject {

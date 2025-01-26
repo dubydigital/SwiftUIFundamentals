@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB3A47222D42BC4700ECF9B1 /* FlipCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3A47212D42BC4700ECF9B1 /* FlipCounterView.swift */; };
 		CB848B6E2D30DA3F0006915D /* Apple_FrameworksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB848B6D2D30DA3F0006915D /* Apple_FrameworksApp.swift */; };
 		CB848B722D30DA400006915D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB848B712D30DA400006915D /* Assets.xcassets */; };
 		CB848B752D30DA400006915D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB848B742D30DA400006915D /* Preview Assets.xcassets */; };
@@ -60,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB3A47212D42BC4700ECF9B1 /* FlipCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCounterView.swift; sourceTree = "<group>"; };
 		CB848B6A2D30DA3F0006915D /* Apple-Frameworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple-Frameworks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB848B6D2D30DA3F0006915D /* Apple_FrameworksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apple_FrameworksApp.swift; sourceTree = "<group>"; };
 		CB848B712D30DA400006915D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,9 +170,9 @@
 			isa = PBXGroup;
 			children = (
 				CB848B972D30DBF60006915D /* FrameworkGridView.swift */,
-				CB848BA72D30E8240006915D /* FrameworkGridViewModel.swift */,
 				CB848B9F2D30E2BF0006915D /* FrameworkDetailView.swift */,
 				CB848BAB2D3188200006915D /* MusicListView.swift */,
+				CB3A47212D42BC4700ECF9B1 /* FlipCounterView.swift */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -181,6 +183,7 @@
 				CB848B9B2D30DFB40006915D /* Framework.swift */,
 				CB848BAF2D3188350006915D /* MusicViewModel.swift */,
 				CB865C1F2D35B5AE00698931 /* DoCatchTryThrowsBootcampViewModel.swift */,
+				CB848BA72D30E8240006915D /* FrameworkGridViewModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				CB848BA42D30E62F0006915D /* AFButton.swift in Sources */,
 				CB865C202D35B5AE00698931 /* DoCatchTryThrowsBootcampViewModel.swift in Sources */,
 				CB848BB02D3188350006915D /* MusicViewModel.swift in Sources */,
+				CB3A47222D42BC4700ECF9B1 /* FlipCounterView.swift in Sources */,
 				CB848B982D30DBF60006915D /* FrameworkGridView.swift in Sources */,
 				CB848BAC2D3188200006915D /* MusicListView.swift in Sources */,
 				CB848BA82D30E8240006915D /* FrameworkGridViewModel.swift in Sources */,
