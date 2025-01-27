@@ -15,8 +15,6 @@ struct FrameworkDetailView: View {
     
     var body: some View {
         VStack {
-            // Close button
-            DismissButtonView(isShowingDetailView: $isShowingDetailView)
         
             Spacer()
             FrameworkTitleView(frameWork: framework)
@@ -35,6 +33,9 @@ struct FrameworkDetailView: View {
         }
         .fullScreenCover(isPresented: $isShowingSafariView, content: {
             SafariView(url: URL(string: framework.urlString) ?? URL(string: "www.apple.com")!)
+            
+//              Link("View Our Term of Service", destination: URL(string: framework.urlString) ?? URL(string: "www.apple.com")!)
+           
         })
  
         

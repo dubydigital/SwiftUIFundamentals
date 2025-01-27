@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-final class FrameworkGridViewModel: ObservableObject {
+final class FrameworkListViewModel: ObservableObject {
     
     var selectedFramework: Framework? {
         didSet {

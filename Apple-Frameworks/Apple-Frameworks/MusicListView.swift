@@ -16,7 +16,6 @@ struct MusicListView: View {
 
         var body: some View {
             
-            DismissButtonView(isShowingDetailView: $isShowingDetailView)
             NavigationView {
                 VStack {
                                                                             
