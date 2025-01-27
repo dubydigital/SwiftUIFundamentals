@@ -8,15 +8,8 @@
 import Foundation
 import SwiftUI
 
-final class FrameworkListViewModel: ObservableObject {
-    
-    var selectedFramework: Framework? {
-        didSet {
-            isShowingDetailView = true
-        }
-    }
-    
-    @Published var isShowingDetailView = false
+final class FrameworkGridViewModel: ObservableObject {
+
               
     let columns: [GridItem] = [GridItem(.flexible()),
                                GridItem(.flexible()),
