@@ -11,15 +11,13 @@ import Foundation
 struct FrameworkGridView: View {
     
     @StateObject var viewModel = FrameworkGridViewModel()
-    let columns: [GridItem] = [GridItem(.flexible()),
-                               GridItem(.flexible()),
-                               GridItem(.flexible())
-    ]
+
     
     var body: some View {
         NavigationView{
             ScrollView {
-                LazyVGrid(columns: columns ){
+                Text("separator")
+                LazyVGrid(columns: viewModel.columns ){
                     ForEach(MockData.frameworks, id: \.id ) { framework in
                         FrameworkTitleView(frameWork: framework)
                             .onTapGesture {
@@ -30,9 +28,10 @@ struct FrameworkGridView: View {
             }
             .navigationTitle("Apple Frameworks")
             .fullScreenCover(isPresented: $viewModel.isShowingDetailView, content: {
-                MusicListView(isShowingDetailView: $viewModel.isShowingDetailView)
-//                FrameworkDetailView(framework: viewModel.selectedFramework ?? MockData.sampleFramework,
-//                                    isShowingDetailView: $viewModel.isShowingDetailView)
+//                MusicListView(isShowingDetailView: $viewModel.isShowingDetailView)
+                
+                FrameworkDetailView(framework: viewModel.selectedFramework ?? MockData.sampleFramework,
+                                    isShowingDetailView: $viewModel.isShowingDetailView)
             })
         }
     }
@@ -44,20 +43,4 @@ struct FrameworkGridView: View {
     
 }
 
-struct FrameworkTitleView: View {
-    let frameWork: Framework
-    
-    var body: some View {
-        VStack {
-            Image(frameWork.imageName)
-                .resizable()
-                .frame(width: 90, height: 90, alignment: .center)
-            Text(frameWork.name)
-                .font(.title2)
-                .fontWeight(.semibold)
-                .scaledToFit()
-                .minimumScaleFactor(0.6)
-        }
-        .padding()
-    }
-}
+

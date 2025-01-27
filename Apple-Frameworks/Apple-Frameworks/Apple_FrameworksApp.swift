@@ -11,8 +11,8 @@ import SwiftUI
 struct Apple_FrameworksApp: App {
     var body: some Scene {
         WindowGroup {
-            DoCatchTryThrowsBootcamp()
-//            FrameworkGridView()
+//            DoCatchTryThrowsBootcamp()
+            FrameworkGridView()
         }
     }
 }
