@@ -8,7 +8,7 @@ https://youtu.be/b1oC7sLIgpI?si=FFdZ_q5L08U6kT-M
 
 This repository follows along the SwiftFundementals Course by Sean Allen. The stages of development are branched.  You can follow along the development by checking out a specific branch from the repo.
 
-# LazyHGridView sample with UIKit SafariView integration 
+# ListView sample with iTunes Search
 
 <!--  
 ![Alt text](/screens/gridScreen.png) ![Alt text](/screens/detailScreen.png) 
