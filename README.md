@@ -16,7 +16,7 @@ This repository follows along the SwiftFundementals Course by Sean Allen. The st
 -->
 
 <p align="center">
-  <img src="/screens/gridScreen.png" alt="Grid Screen" width="300">
-  <img src="/screens/detailScreen.png" alt="Detail Screen" width="300">
-  <img src="/screens/safariUikitView.png" alt="Safari View" width="300">
+  <img src="/screens/gridScreen.png" alt="Grid Screen" width="200">
+  <img src="/screens/detailScreen.png" alt="Detail Screen" width="200">
+  <img src="/screens/safariUikitView.png" alt="Safari View" width="200">
 </p>
