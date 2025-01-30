@@ -15,12 +15,17 @@ struct BarcodeScannerView: View {
     var body: some View {
         NavigationView {
             VStack {
-//                Rectangle()
-//                    .frame(maxWidth: .infinity, maxHeight: 300)
-                ScannerView(scannedCode: $viewModel.scannedCode, 
-                            alertItem: $viewModel.alertItem)
-                .frame(maxWidth: .infinity, maxHeight: 300)
 
+
+                ZStack {
+                    Rectangle()
+                        .frame(maxWidth: .infinity, maxHeight: 300)
+                    ScannerView(scannedCode: $viewModel.scannedCode,
+                                alertItem: $viewModel.alertItem)
+                    .frame(maxWidth: .infinity, maxHeight: 300)
+                    
+                }
+                
                 Spacer().frame(height:60)
                 
                 Label("Scanned Barcode:", systemImage: "barcode.viewfinder")
