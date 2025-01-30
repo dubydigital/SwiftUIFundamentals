@@ -92,11 +92,7 @@ final class ScannerVC: UIViewController {
         DispatchQueue.global(qos: .userInitiated).async {
             self.captureSession.startRunning()
         }
-        
-        
     }
-    
-    
 }
 
 extension ScannerVC: AVCaptureMetadataOutputObjectsDelegate {

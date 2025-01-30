@@ -114,12 +114,8 @@
 		CB4FEEEE2D4838A100B0CDA1 /* BarcodeScanner */ = {
 			isa = PBXGroup;
 			children = (
-				CB4FEF2B2D4C081600B0CDA1 /* Alert.swift */,
-				CB4FEF2F2D4C083F00B0CDA1 /* BarcodeScannerViewModel.swift */,
+				CB4FEF332D4C3DFC00B0CDA1 /* Screens */,
 				CB4FEEEF2D4838A100B0CDA1 /* BarcodeScannerApp.swift */,
-				CB4FEEF12D4838A100B0CDA1 /* BarcodeScannerView.swift */,
-				CB4FEF192D483C8800B0CDA1 /* ScannerVC.swift */,
-				CB4FEF1D2D4845D300B0CDA1 /* ScannerView.swift */,
 				CB4FEEF32D4838A100B0CDA1 /* Assets.xcassets */,
 				CB4FEEF52D4838A100B0CDA1 /* Preview Content */,
 			);
@@ -149,6 +145,50 @@
 				CB4FEF0C2D4838A100B0CDA1 /* BarcodeScannerUITestsLaunchTests.swift */,
 			);
 			path = BarcodeScannerUITests;
+			sourceTree = "<group>";
+		};
+		CB4FEF332D4C3DFC00B0CDA1 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				CB4FEF372D4C3E5D00B0CDA1 /* Utilities */,
+				CB4FEF352D4C3E1D00B0CDA1 /* Views */,
+				CB4FEF342D4C3E0900B0CDA1 /* BarcodeScanner */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		CB4FEF342D4C3E0900B0CDA1 /* BarcodeScanner */ = {
+			isa = PBXGroup;
+			children = (
+				CB4FEF2F2D4C083F00B0CDA1 /* BarcodeScannerViewModel.swift */,
+				CB4FEEF12D4838A100B0CDA1 /* BarcodeScannerView.swift */,
+			);
+			path = BarcodeScanner;
+			sourceTree = "<group>";
+		};
+		CB4FEF352D4C3E1D00B0CDA1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB4FEF362D4C3E2300B0CDA1 /* UIKitComponent */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CB4FEF362D4C3E2300B0CDA1 /* UIKitComponent */ = {
+			isa = PBXGroup;
+			children = (
+				CB4FEF192D483C8800B0CDA1 /* ScannerVC.swift */,
+				CB4FEF1D2D4845D300B0CDA1 /* ScannerView.swift */,
+			);
+			path = UIKitComponent;
+			sourceTree = "<group>";
+		};
+		CB4FEF372D4C3E5D00B0CDA1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CB4FEF2B2D4C081600B0CDA1 /* Alert.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
