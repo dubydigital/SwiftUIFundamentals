@@ -16,7 +16,6 @@ struct BarcodeScannerView: View {
         NavigationView {
             VStack {
 
-
                 ZStack {
                     Rectangle()
                         .frame(maxWidth: .infinity, maxHeight: 300)
