@@ -29,7 +29,6 @@ struct FrameworkGridView: View {
             .navigationTitle("Apple Frameworks")
             .fullScreenCover(isPresented: $viewModel.isShowingDetailView, content: {
 //                MusicListView(isShowingDetailView: $viewModel.isShowingDetailView)
-                
                 FrameworkDetailView(framework: viewModel.selectedFramework ?? MockData.sampleFramework,
                                     isShowingDetailView: $viewModel.isShowingDetailView)
             })
