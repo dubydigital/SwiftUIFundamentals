@@ -26,7 +26,7 @@ class MusicViewModel: ObservableObject {
     func fetchMusic(searchTerm: String) {
         let formattedTerm = searchTerm.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         let urlString = "https://itunes.apple.com/search?term=\(formattedTerm)&entity=song&limit=200"
-
+        
         guard let url = URL(string: urlString) else { return }
 
         URLSession.shared.dataTask(with: url) { data, response, error in

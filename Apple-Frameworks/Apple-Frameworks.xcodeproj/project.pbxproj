@@ -135,6 +135,7 @@
 		CB4FEEA62D47E0D000B0CDA1 /* MusicDetail */ = {
 			isa = PBXGroup;
 			children = (
+				CB848BAF2D3188350006915D /* MusicViewModel.swift */,
 				CB848BAB2D3188200006915D /* MusicListView.swift */,
 			);
 			name = MusicDetail;
@@ -240,7 +241,6 @@
 			isa = PBXGroup;
 			children = (
 				CB848B9B2D30DFB40006915D /* Framework.swift */,
-				CB848BAF2D3188350006915D /* MusicViewModel.swift */,
 				CB865C1F2D35B5AE00698931 /* DoCatchTryThrowsBootcampViewModel.swift */,
 			);
 			name = Model;
