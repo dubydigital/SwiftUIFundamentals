@@ -33,6 +33,8 @@
 		CB938A0F2D8202E900971E22 /* Exceptions for "App4-Appetizers" folder in "App4-AppetizersTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Appetizer.swift,
+				AppetizerListCell.swift,
 				AppetizersAccountView.swift,
 				AppetizersListView.swift,
 				AppetizersOrderView.swift,
@@ -43,6 +45,8 @@
 		CB938A102D8202E900971E22 /* Exceptions for "App4-Appetizers" folder in "App4-AppetizersUITests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Appetizer.swift,
+				AppetizerListCell.swift,
 				AppetizersAccountView.swift,
 				AppetizersListView.swift,
 				AppetizersOrderView.swift,

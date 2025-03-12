@@ -1,13 +1,222 @@
 {\rtf1\ansi\ansicpg1252\cocoartf2821
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww5760\viewh10780\viewkind0
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Bold;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\fnil\fcharset0 HelveticaNeue;\f4\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red252\green107\blue170;\red24\green23\blue27;\red255\green255\blue255;
+\red93\green216\blue255;\red222\green193\blue255;\red115\green154\blue255;\red255\green255\blue255;\red0\green0\blue0;
+\red144\green1\blue18;\red9\green60\blue148;\red19\green118\blue70;}
+{\*\expandedcolortbl;;\csgenericrgb\c98896\c42114\c66499;\csgenericrgb\c9220\c9172\c10609;\csgenericrgb\c100000\c100000\c100000;
+\csgenericrgb\c36471\c84706\c100000;\csgenericrgb\c87028\c75839\c99946;\csgenericrgb\c45037\c60241\c99877;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0;
+\cssrgb\c63922\c8235\c8235;\cssrgb\c1569\c31765\c64706;\cssrgb\c3529\c52549\c34510;}
+\margl1440\margr1440\vieww23340\viewh18680\viewkind0
 \deftab720
 \pard\pardeftab720\partightenfactor0
 
 \f0\fs46 \cf0 \expnd0\expndtw0\kerning0
 Appetizers Notes\
 \
+\
+
+\fs36 @main in app class \
+\pard\tx593\pardeftab593\partightenfactor0
+
+\f1\b\fs24 \cf2 \cb3 \kerning1\expnd0\expndtw0 @main
+\f2\b0 \cf4 \
+
+\f1\b \cf2 struct
+\f2\b0 \cf4  \cf5 \cb3 App4_AppetizersApp\cf4 \cb3 : \cf6 App\cf4  \{
+\f0\fs36 \cf0 \cb1 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+* app is a scene (introduced in iOS 13) \
+- allows for multiple windows \
+- body of app returns scene\
+- body is a scene builder \
+\
+\pard\tx593\pardeftab593\partightenfactor0
+
+\f2\fs24 \cf7 \cb3 \kerning1\expnd0\expndtw0 https://docs.swift.org/swift-book/ReferenceManual/Attributes.html#ID626
+\f0\fs36 \cf0 \cb1 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 @Main\
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs26 \cf0 \cb8 \outl0\strokewidth0 \strokec9 Apply this attribute to a structure, class, or enumeration declaration to indicate that it contains the top-level entry point for program flow. The type must provide a\'a0
+\f2 main
+\f3 \'a0type function that doesn\'92t take any arguments and returns\'a0
+\f2 Void
+\f3 . For example:
+\fs34 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs21\fsmilli10588 \cf0 \cb1 @main\
+struct MyTopLevel \{\
+    static func main() \{\
+        // Top-level code goes here\
+    \}\
+\}\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs36 \cf0 \outl0\strokewidth0 Recap: \
+Your application conforms to :App, body returns Scene\
+\
+Sample API:\
+(Pro Tip: Add a JSON Pretty extension to your chrome or browser)\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs32 \cf0 \kerning1\expnd0\expndtw0 https://seanallen-course-backend.herokuapp.com/swiftui-fundamentals/appetizers
+\fs24 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs18 \cf0 \cb8 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec9 \{\cb1 \
+\cb8     \cf10 \strokec10 "request"\cf0 \strokec9 : [\cb1 \
+\cb8         \{\cb1 \
+\cb8             \cf10 \strokec10 "imageURL"\cf0 \strokec9 : \cf11 \strokec11 "https://seanallen-course-backend.herokuapp.com/images/appetizers/asian-flank-steak.jpg"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "description"\cf0 \strokec9 : \cf11 \strokec11 "This perfectly thin cut just melts in your mouth."\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "calories"\cf0 \strokec9 : \cf12 \strokec12 300\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "protein"\cf0 \strokec9 : \cf12 \strokec12 14\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "name"\cf0 \strokec9 : \cf11 \strokec11 "Asian Flank Steak"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "price"\cf0 \strokec9 : \cf12 \strokec12 8.99\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "carbs"\cf0 \strokec9 : \cf12 \strokec12 0\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "id"\cf0 \strokec9 : \cf12 \strokec12 1\cf0 \cb1 \strokec9 \
+\cb8         \},\cb1 \
+\cb8         \{\cb1 \
+\cb8             \cf10 \strokec10 "imageURL"\cf0 \strokec9 : \cf11 \strokec11 "https://seanallen-course-backend.herokuapp.com/images/appetizers/blackened-shrimp.jpg"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "description"\cf0 \strokec9 : \cf11 \strokec11 "Seasoned shrimp from the depths of the Atlantic Ocean."\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "calories"\cf0 \strokec9 : \cf12 \strokec12 450\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "protein"\cf0 \strokec9 : \cf12 \strokec12 4\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "name"\cf0 \strokec9 : \cf11 \strokec11 "Blackened Shrimp"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "price"\cf0 \strokec9 : \cf12 \strokec12 6.99\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "carbs"\cf0 \strokec9 : \cf12 \strokec12 3\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "id"\cf0 \strokec9 : \cf12 \strokec12 2\cf0 \cb1 \strokec9 \
+\cb8         \},\cb1 \
+\cb8         \{\cb1 \
+\cb8             \cf10 \strokec10 "imageURL"\cf0 \strokec9 : \cf11 \strokec11 "https://seanallen-course-backend.herokuapp.com/images/appetizers/buffalo-chicken-bites.jpg"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "calories"\cf0 \strokec9 : \cf12 \strokec12 800\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "description"\cf0 \strokec9 : \cf11 \strokec11 "The tasty bites of chicken have just the right amount of kick to them."\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "protein"\cf0 \strokec9 : \cf12 \strokec12 5\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "name"\cf0 \strokec9 : \cf11 \strokec11 "Buffalo Chicken Bites"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "price"\cf0 \strokec9 : \cf12 \strokec12 7.49\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "carbs"\cf0 \strokec9 : \cf12 \strokec12 22\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "id"\cf0 \strokec9 : \cf12 \strokec12 3\cf0 \cb1 \strokec9 \
+\cb8         \},\cb1 \
+\cb8         \{\cb1 \
+\cb8             \cf10 \strokec10 "imageURL"\cf0 \strokec9 : \cf11 \strokec11 "https://seanallen-course-backend.herokuapp.com/images/appetizers/chicken-avocado-spring-roll.jpg"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "description"\cf0 \strokec9 : \cf11 \strokec11 "These won't last 10 seconds once they hit the table."\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "calories"\cf0 \strokec9 : \cf12 \strokec12 480\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "protein"\cf0 \strokec9 : \cf12 \strokec12 7\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "name"\cf0 \strokec9 : \cf11 \strokec11 "Chicken Avocado Spring Roll"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "price"\cf0 \strokec9 : \cf12 \strokec12 12.99\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "carbs"\cf0 \strokec9 : \cf12 \strokec12 19\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "id"\cf0 \strokec9 : \cf12 \strokec12 4\cf0 \cb1 \strokec9 \
+\cb8         \},\cb1 \
+\cb8         \{\cb1 \
+\cb8             \cf10 \strokec10 "imageURL"\cf0 \strokec9 : \cf11 \strokec11 "https://seanallen-course-backend.herokuapp.com/images/appetizers/chicken-dumplings.jpg"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "description"\cf0 \strokec9 : \cf11 \strokec11 "It's really hard to keep coming up with these descriptions."\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "calories"\cf0 \strokec9 : \cf12 \strokec12 580\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "protein"\cf0 \strokec9 : \cf12 \strokec12 4\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "name"\cf0 \strokec9 : \cf11 \strokec11 "Chicken Dumplings"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "carbs"\cf0 \strokec9 : \cf12 \strokec12 14\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "price"\cf0 \strokec9 : \cf12 \strokec12 8.99\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "id"\cf0 \strokec9 : \cf12 \strokec12 5\cf0 \cb1 \strokec9 \
+\cb8         \},\cb1 \
+\cb8         \{\cb1 \
+\cb8             \cf10 \strokec10 "imageURL"\cf0 \strokec9 : \cf11 \strokec11 "https://seanallen-course-backend.herokuapp.com/images/appetizers/chicken-fingers.jpg"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "calories"\cf0 \strokec9 : \cf12 \strokec12 675\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "description"\cf0 \strokec9 : \cf11 \strokec11 "You can never go wrong with some good tenders."\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "protein"\cf0 \strokec9 : \cf12 \strokec12 9\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "name"\cf0 \strokec9 : \cf11 \strokec11 "Chicken Fingers"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "carbs"\cf0 \strokec9 : \cf12 \strokec12 5\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "price"\cf0 \strokec9 : \cf12 \strokec12 9.99\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "id"\cf0 \strokec9 : \cf12 \strokec12 6\cf0 \cb1 \strokec9 \
+\cb8         \},\cb1 \
+\cb8         \{\cb1 \
+\cb8             \cf10 \strokec10 "imageURL"\cf0 \strokec9 : \cf11 \strokec11 "https://seanallen-course-backend.herokuapp.com/images/appetizers/chicken-wings.jpg"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "calories"\cf0 \strokec9 : \cf12 \strokec12 700\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "description"\cf0 \strokec9 : \cf11 \strokec11 "You'll need extra napkins with these tasty treats."\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "protein"\cf0 \strokec9 : \cf12 \strokec12 13\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "name"\cf0 \strokec9 : \cf11 \strokec11 "Chicken Wings"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "carbs"\cf0 \strokec9 : \cf12 \strokec12 11\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "price"\cf0 \strokec9 : \cf12 \strokec12 11.49\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "id"\cf0 \strokec9 : \cf12 \strokec12 7\cf0 \cb1 \strokec9 \
+\cb8         \},\cb1 \
+\cb8         \{\cb1 \
+\cb8             \cf10 \strokec10 "imageURL"\cf0 \strokec9 : \cf11 \strokec11 "https://seanallen-course-backend.herokuapp.com/images/appetizers/fried-cheese-ravioli.jpg"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "description"\cf0 \strokec9 : \cf11 \strokec11 "I'm getting soooo hungry building this app..."\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "calories"\cf0 \strokec9 : \cf12 \strokec12 415\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "protein"\cf0 \strokec9 : \cf12 \strokec12 2\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "name"\cf0 \strokec9 : \cf11 \strokec11 "Fried Cheese Ravioli"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "carbs"\cf0 \strokec9 : \cf12 \strokec12 29\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "price"\cf0 \strokec9 : \cf12 \strokec12 8.29\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "id"\cf0 \strokec9 : \cf12 \strokec12 8\cf0 \cb1 \strokec9 \
+\cb8         \},\cb1 \
+\cb8         \{\cb1 \
+\cb8             \cf10 \strokec10 "imageURL"\cf0 \strokec9 : \cf11 \strokec11 "https://seanallen-course-backend.herokuapp.com/images/appetizers/jumbo-tater-tot.jpg"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "description"\cf0 \strokec9 : \cf11 \strokec11 "Scrumptious tots with a side of ranch."\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "calories"\cf0 \strokec9 : \cf12 \strokec12 625\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "protein"\cf0 \strokec9 : \cf12 \strokec12 3\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "name"\cf0 \strokec9 : \cf11 \strokec11 "Jumbo Tater Tots"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "price"\cf0 \strokec9 : \cf12 \strokec12 13.99\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "carbs"\cf0 \strokec9 : \cf12 \strokec12 40\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "id"\cf0 \strokec9 : \cf12 \strokec12 9\cf0 \cb1 \strokec9 \
+\cb8         \},\cb1 \
+\cb8         \{\cb1 \
+\cb8             \cf10 \strokec10 "imageURL"\cf0 \strokec9 : \cf11 \strokec11 "https://seanallen-course-backend.herokuapp.com/images/appetizers/meatballs.jpg"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "description"\cf0 \strokec9 : \cf11 \strokec11 "It's a spiiiiicy meat-a-ball!"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "calories"\cf0 \strokec9 : \cf12 \strokec12 500\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "protein"\cf0 \strokec9 : \cf12 \strokec12 33\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "name"\cf0 \strokec9 : \cf11 \strokec11 "Meatballs"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "carbs"\cf0 \strokec9 : \cf12 \strokec12 2\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "price"\cf0 \strokec9 : \cf12 \strokec12 12.99\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "id"\cf0 \strokec9 : \cf12 \strokec12 10\cf0 \cb1 \strokec9 \
+\cb8         \},\cb1 \
+\cb8         \{\cb1 \
+\cb8             \cf10 \strokec10 "imageURL"\cf0 \strokec9 : \cf11 \strokec11 "https://seanallen-course-backend.herokuapp.com/images/appetizers/mozzarella-sticks.jpg"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "calories"\cf0 \strokec9 : \cf12 \strokec12 930\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "description"\cf0 \strokec9 : \cf11 \strokec11 "The best appetizer there is.\\nDon't @ me."\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "protein"\cf0 \strokec9 : \cf12 \strokec12 2\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "name"\cf0 \strokec9 : \cf11 \strokec11 "Mozzarella Sticks"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "price"\cf0 \strokec9 : \cf12 \strokec12 6.99\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "carbs"\cf0 \strokec9 : \cf12 \strokec12 32\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "id"\cf0 \strokec9 : \cf12 \strokec12 11\cf0 \cb1 \strokec9 \
+\cb8         \},\cb1 \
+\cb8         \{\cb1 \
+\cb8             \cf10 \strokec10 "imageURL"\cf0 \strokec9 : \cf11 \strokec11 "https://seanallen-course-backend.herokuapp.com/images/appetizers/philly-cheesesteak-sliders.jpg"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "calories"\cf0 \strokec9 : \cf12 \strokec12 725\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "description"\cf0 \strokec9 : \cf11 \strokec11 "These look incredible. That's it. That's the description."\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "protein"\cf0 \strokec9 : \cf12 \strokec12 28\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "name"\cf0 \strokec9 : \cf11 \strokec11 "Philly Cheesesteak Sliders"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "carbs"\cf0 \strokec9 : \cf12 \strokec12 28\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "price"\cf0 \strokec9 : \cf12 \strokec12 10.99\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "id"\cf0 \strokec9 : \cf12 \strokec12 12\cf0 \cb1 \strokec9 \
+\cb8         \},\cb1 \
+\cb8         \{\cb1 \
+\cb8             \cf10 \strokec10 "imageURL"\cf0 \strokec9 : \cf11 \strokec11 "https://seanallen-course-backend.herokuapp.com/images/appetizers/rainbow-spring-rolls.jpg"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "description"\cf0 \strokec9 : \cf11 \strokec11 "How did these even make the menu???"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "calories"\cf0 \strokec9 : \cf12 \strokec12 270\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "protein"\cf0 \strokec9 : \cf12 \strokec12 2\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "name"\cf0 \strokec9 : \cf11 \strokec11 "Rainbow Spring Rolls"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "price"\cf0 \strokec9 : \cf12 \strokec12 5.99\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "carbs"\cf0 \strokec9 : \cf12 \strokec12 4\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "id"\cf0 \strokec9 : \cf12 \strokec12 13\cf0 \cb1 \strokec9 \
+\cb8         \},\cb1 \
+\cb8         \{\cb1 \
+\cb8             \cf10 \strokec10 "imageURL"\cf0 \strokec9 : \cf11 \strokec11 "https://seanallen-course-backend.herokuapp.com/images/appetizers/stuff-shells.jpg"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "calories"\cf0 \strokec9 : \cf12 \strokec12 850\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "description"\cf0 \strokec9 : \cf11 \strokec11 "I'm getting hungrier just looking at these."\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "protein"\cf0 \strokec9 : \cf12 \strokec12 4\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "name"\cf0 \strokec9 : \cf11 \strokec11 "Stuffed Shells"\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "carbs"\cf0 \strokec9 : \cf12 \strokec12 42\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "price"\cf0 \strokec9 : \cf12 \strokec12 12.49\cf0 \strokec9 ,\cb1 \
+\cb8             \cf10 \strokec10 "id"\cf0 \strokec9 : \cf12 \strokec12 14\cf0 \cb1 \strokec9 \
+\cb8         \}\cb1 \
+\cb8     ]\cb1 \
+\cb8 \}\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf0 \
 \
 }
