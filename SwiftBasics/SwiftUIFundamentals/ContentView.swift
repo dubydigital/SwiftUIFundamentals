@@ -38,10 +38,17 @@ struct ContentView: View {
                     WeatherDayView(dayOfWeek: "WED", imageName: "sun.max.fill", temperature: 88)
                     WeatherDayView(dayOfWeek: "THU", imageName: "wind.snow", temperature: 70)
                     WeatherDayView(dayOfWeek: "FRI", imageName: "sunset.fill", temperature: 70)
-                    WeatherDayView(dayOfWeek: "SAT", imageName: "snow", temperature: 70)
+                    WeatherDayView(dayOfWeek: "SAT", imageName: "snowflake", temperature: 70)
+                    
                     
                 }
                 Spacer()
+                Image(systemName: "snowflake")
+                    .renderingMode(.original)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 40, height: 40)
+                    .foregroundStyle(Color("mdGreen"))
                 
                 Button {
                     // Action
@@ -83,6 +90,8 @@ struct WeatherDayView: View {
             Text("\(temperature)")
                 .font(.system(size: 28, weight: .medium))
                 .foregroundColor(.white)
+            
+            
             
         }
     }
