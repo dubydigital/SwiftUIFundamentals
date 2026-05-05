@@ -13,6 +13,7 @@ struct ContentView: View {
             BackgroundView(topColor:Color.blue, bottomColor: Color("lightBlue"))
             
             VStack(spacing: 10) {
+                // MARK: CityView
                 CityTextView(cityName: "Austin, TX")
                 
                 MainWeatherStatusView(imageName: "cloud.sun.fill", tempVal: "70")
@@ -61,6 +62,7 @@ struct WeatherDayView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 40, height: 40)
+                .foregroundColor(.white)// additional color
             Text("\(temperature)")
                 .font(.system(size: 28, weight: .medium))
                 .foregroundColor(.white)
