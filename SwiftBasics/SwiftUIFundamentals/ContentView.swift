@@ -77,12 +77,21 @@ struct WeatherDayView: View {
 struct BackgroundView: View {
     @Binding var isNight: Bool
     var body: some View {
-        LinearGradient(
-            gradient: Gradient(colors: [isNight ? .black : .blue, isNight ? .gray : Color("lightBlue")]),
-            startPoint: .topLeading,
-            endPoint: .bottomTrailing)
-//        .edgesIgnoringSafeArea(.all)
-        .ignoresSafeArea()
+        ZStack {
+            LinearGradient(
+                gradient: Gradient(colors: [isNight ? .black : .blue, isNight ? .gray : Color("lightBlue")]),
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing)
+            .ignoresSafeArea()
+            VStack {
+                Spacer()
+                Button{
+                    isNight.toggle()
+                } label: {
+                    WeatherButton(title: "Bounded Button", textColor: Color.blue, backgroundColor: .white)
+                }
+            }
+        }
     }
 }
 
