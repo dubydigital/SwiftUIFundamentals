@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct AppetizerListView: View {
+    @StateObject var viewModel = AppetizerListViewModel()
     
-    @State private var appetizers: [Appetizer] = []
+//    @State private var appetizers: [Appetizer] = []
     private var useMock: Bool = false
         
     var body: some View {
@@ -21,31 +22,22 @@ struct AppetizerListView: View {
                 }
                 .navigationTitle(Text("🍟 Appetizers"))
             } else {
-                List(appetizers, id: \.id) { appetizer in
+                List(viewModel.appetizers, id: \.id) { appetizer in
                     AppetizerListCell(appetizer: appetizer)
                 }
                 .navigationTitle(Text("🍟 Appetizers"))
             }
         }
         .onAppear() {
-            getAppetizers()
+            viewModel.getAppetizers()
+        }
+        .alert(item: $viewModel.alertItem) { alertItem in
+            Alert(title: alertItem.title,
+                  message: alertItem.message,
+                  dismissButton: alertItem.dismissButton)
         }
     }
     
-    func getAppetizers() {
-        
-        NetworkManager.shared.getAppetizers { result in
-            DispatchQueue.main.async { // Update UI On main Thread
-                switch result {
-                case .success(let appetizers):
-                    self.appetizers = appetizers
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
-            }
-
-        }
-    }
 }
 
 #Preview {
