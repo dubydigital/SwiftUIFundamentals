@@ -13,23 +13,22 @@ import Foundation
 // - Encodable to update to server
 // - Codable does both decode and encode
 
-struct Appetizer: Decodable, Identifiable {
+nonisolated struct Appetizer: Decodable, Identifiable {
     let id: Int
     let name: String
     let description: String
     let price: Double
     let imageURL: String
     let calories: Int
-    let protiein: Int
+    let protein: Int
     let carbs: Int
 }
 
-
-
-struct AppetizerResponse {
+nonisolated struct AppetizerResponse: Decodable {
     let request: [Appetizer]
 }
 
+// Mock Data
 struct MockData {
     static let sampleAppetizer = Appetizer(id: 001,
                                            name: "Test Appetizer",
@@ -37,12 +36,12 @@ struct MockData {
                                            price: 10.00,
                                            imageURL: "",
                                            calories: 2000,
-                                           protiein: 99,
+                                           protein: 99,
                                            carbs: 99)
     static let appetizers = [sampleAppetizer, sampleAppetizer, sampleAppetizer, sampleAppetizer]
 }
 
-// Mock Data
+
 
 
 

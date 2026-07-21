@@ -34,8 +34,10 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				AccountView.swift,
+				APError.swift,
 				AppetizerListCell.swift,
 				AppetizerListView.swift,
+				NetworkManager.swift,
 				OrderView.swift,
 			);
 			target = CB43A86C2FFEC70000337B7C /* AppetizersTests */;
@@ -44,8 +46,10 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				AccountView.swift,
+				APError.swift,
 				AppetizerListCell.swift,
 				AppetizerListView.swift,
+				NetworkManager.swift,
 				OrderView.swift,
 			);
 			target = CB43A8762FFEC70000337B7C /* AppetizersUITests */;
