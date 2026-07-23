@@ -32,7 +32,7 @@ nonisolated struct AppetizerResponse: Decodable {
 struct MockData {
     static let sampleAppetizer = Appetizer(id: 001,
                                            name: "Test Appetizer",
-                                           description: "Test Decscription",
+                                           description: "Test Decscription. Ze best appetizer zer is. Simply the best. Oui",
                                            price: 10.00,
                                            imageURL: "",
                                            calories: 2000,

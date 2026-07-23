@@ -9,28 +9,32 @@ import SwiftUI
 
 struct AppetizerListView: View {
     @StateObject var viewModel = AppetizerListViewModel()
-    
-//    @State private var appetizers: [Appetizer] = []
-    private var useMock: Bool = false
+
         
     var body: some View {
         ZStack {
             NavigationView {
-                if useMock {
-                    // Using Mock Data:
-                    List(MockData.appetizers, id: \.id) { appetizer in
-                        AppetizerListCell(appetizer: appetizer)
-                    }
-                    .navigationTitle(Text("🍟 Appetizers"))
-                } else {
-                    List(viewModel.appetizers, id: \.id) { appetizer in
-                        AppetizerListCell(appetizer: appetizer)
-                    }
-                    .navigationTitle(Text("🍟 Appetizers"))
+                List(viewModel.appetizers, id: \.id) { appetizer in
+                    AppetizerListCell(appetizer: appetizer)
+                        .onTapGesture {
+                            print("tapGesture")
+                            viewModel.isShowingDetail = true
+                            viewModel.selectedAppetizer = appetizer
+                        }
                 }
+                .navigationTitle(Text("🍟 Appetizers"))
+                .disabled(viewModel.isShowingDetail)
             }
             .onAppear() {
                 viewModel.getAppetizers()
+            }
+            .blur(radius: viewModel.isShowingDetail ? 20 : 0)// Add on NavigationView
+            
+            // Detail View
+            
+            if viewModel.isShowingDetail {
+                AppetizerDetailView(appetizer: viewModel.selectedAppetizer!  ,
+                                    isShowingDetail: $viewModel.isShowingDetail)
             }
             
             if viewModel.isLoading {
