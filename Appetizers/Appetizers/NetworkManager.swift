@@ -56,9 +56,7 @@ final class NetworkManager {
                 print("error: invalidData")
             }
         }
-        
-        
+                
         task.resume()
     }
-
 }

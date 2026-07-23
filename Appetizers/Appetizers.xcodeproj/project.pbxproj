@@ -38,9 +38,11 @@
 				AppetizerListCell.swift,
 				AppetizerListView.swift,
 				AppetizerListViewModel.swift,
+				"Color+Ext.swift",
 				NetworkManager.swift,
 				OrderView.swift,
 				Utilities/AlertView.swift,
+				Utilities/LoadingView.swift,
 			);
 			target = CB43A86C2FFEC70000337B7C /* AppetizersTests */;
 		};
@@ -52,9 +54,11 @@
 				AppetizerListCell.swift,
 				AppetizerListView.swift,
 				AppetizerListViewModel.swift,
+				"Color+Ext.swift",
 				NetworkManager.swift,
 				OrderView.swift,
 				Utilities/AlertView.swift,
+				Utilities/LoadingView.swift,
 			);
 			target = CB43A8762FFEC70000337B7C /* AppetizersUITests */;
 		};

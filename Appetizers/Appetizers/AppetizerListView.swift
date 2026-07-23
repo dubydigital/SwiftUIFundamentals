@@ -14,22 +14,29 @@ struct AppetizerListView: View {
     private var useMock: Bool = false
         
     var body: some View {
-        NavigationView {
-            if useMock {
-                // Using Mock Data:
-                List(MockData.appetizers, id: \.id) { appetizer in
-                    AppetizerListCell(appetizer: appetizer)
+        ZStack {
+            NavigationView {
+                if useMock {
+                    // Using Mock Data:
+                    List(MockData.appetizers, id: \.id) { appetizer in
+                        AppetizerListCell(appetizer: appetizer)
+                    }
+                    .navigationTitle(Text("🍟 Appetizers"))
+                } else {
+                    List(viewModel.appetizers, id: \.id) { appetizer in
+                        AppetizerListCell(appetizer: appetizer)
+                    }
+                    .navigationTitle(Text("🍟 Appetizers"))
                 }
-                .navigationTitle(Text("🍟 Appetizers"))
-            } else {
-                List(viewModel.appetizers, id: \.id) { appetizer in
-                    AppetizerListCell(appetizer: appetizer)
-                }
-                .navigationTitle(Text("🍟 Appetizers"))
             }
-        }
-        .onAppear() {
-            viewModel.getAppetizers()
+            .onAppear() {
+                viewModel.getAppetizers()
+            }
+            
+            if viewModel.isLoading {
+                LoadingView()
+            }
+            
         }
         .alert(item: $viewModel.alertItem) { alertItem in
             Alert(title: alertItem.title,
@@ -37,7 +44,6 @@ struct AppetizerListView: View {
                   dismissButton: alertItem.dismissButton)
         }
     }
-    
 }
 
 #Preview {
