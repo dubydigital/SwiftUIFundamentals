@@ -33,34 +33,34 @@
 		CB43A88E2FFEC86E00337B7C /* Exceptions for "Appetizers" folder in "AppetizersTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				AccountView.swift,
-				APError.swift,
-				AppetizerListCell.swift,
-				AppetizerListView.swift,
-				AppetizerListViewModel.swift,
-				"Color+Ext.swift",
-				NetworkManager.swift,
-				OrderView.swift,
-				RemoteImage.swift,
-				Utilities/AlertView.swift,
-				Utilities/LoadingView.swift,
+				Screens/AccountView/AccountView.swift,
+				Screens/AppetizerListView/AppetizerListView.swift,
+				Screens/AppetizerListView/AppetizerListViewModel.swift,
+				Screens/OrderView/OrderView.swift,
+				Utilities/Alerts/AlertView.swift,
+				Utilities/Alerts/APError.swift,
+				"Utilities/Extensions/Color+Ext.swift",
+				Utilities/Managers/NetworkManager.swift,
+				Views/Cells/AppetizerListCell.swift,
+				Views/Image/RemoteImage.swift,
+				"Views/UIKit Components/LoadingView.swift",
 			);
 			target = CB43A86C2FFEC70000337B7C /* AppetizersTests */;
 		};
 		CB43A88F2FFEC86E00337B7C /* Exceptions for "Appetizers" folder in "AppetizersUITests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				AccountView.swift,
-				APError.swift,
-				AppetizerListCell.swift,
-				AppetizerListView.swift,
-				AppetizerListViewModel.swift,
-				"Color+Ext.swift",
-				NetworkManager.swift,
-				OrderView.swift,
-				RemoteImage.swift,
-				Utilities/AlertView.swift,
-				Utilities/LoadingView.swift,
+				Screens/AccountView/AccountView.swift,
+				Screens/AppetizerListView/AppetizerListView.swift,
+				Screens/AppetizerListView/AppetizerListViewModel.swift,
+				Screens/OrderView/OrderView.swift,
+				Utilities/Alerts/AlertView.swift,
+				Utilities/Alerts/APError.swift,
+				"Utilities/Extensions/Color+Ext.swift",
+				Utilities/Managers/NetworkManager.swift,
+				Views/Cells/AppetizerListCell.swift,
+				Views/Image/RemoteImage.swift,
+				"Views/UIKit Components/LoadingView.swift",
 			);
 			target = CB43A8762FFEC70000337B7C /* AppetizersUITests */;
 		};
