@@ -5,16 +5,17 @@
 //  Created by Mark Dubouzet on 7/13/26.
 //
 
-import Foundation
+import UIKit
 
 // Singleton
 final class NetworkManager {
 
     static let shared = NetworkManager()
+    private let cache = NSCache<NSString, UIImage>()
     
     static let baseURL = "https://3sfblusuij.execute-api.us-east-1.amazonaws.com/prod/"
-    // "http://127.0.0.1:8000/"
-    // Or http://localhost:8000/appetizers
+    // Local Python: "http://127.0.0.1:8000/"
+    // Local Sam start-api http://127.0.0.1:3000/
     // Original "https://seanallen-course-backend.herokuapp.com/swiftui-fundamentals/"
     private let appetizerURL = baseURL + "appetizers"
     
@@ -57,6 +58,38 @@ final class NetworkManager {
             }
         }
                 
+        task.resume()
+    }
+    
+    func downloadImage(fromURLString urlString: String, completed: @escaping (UIImage?) -> Void) {
+        print("downloadImage: urlString: \(urlString)")
+        // Use unique keys, in sample using URL
+        let cacheKey = NSString(string: urlString)
+        
+        // If cache   exist
+        if let image = cache.object(forKey:cacheKey) {
+            print("downloadImage: cache does not exist")
+            completed(image)
+            return
+        }
+        // Check URL
+        guard let url = URL(string: urlString) else {
+            print("downloadImage: url does not checkout")
+            completed(nil)
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { (data, response, error) in
+            guard let data = data, let image = UIImage(data: data ) else {
+                print("downloadImage: Bad Data")
+                completed(nil)
+                return
+            }
+            // Set image for cacheKey
+            self.cache.setObject(image, forKey: cacheKey)
+            completed(image)// <-- Don't forget this
+        }
+        // Resume
         task.resume()
     }
 }
