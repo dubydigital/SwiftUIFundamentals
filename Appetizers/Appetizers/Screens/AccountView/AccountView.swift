@@ -14,28 +14,31 @@ struct AccountView: View {
         NavigationView {
             Form {
                 Section(header: Text("Personal Info")) {
-                    TextField("First Name", text: $accountViewModel.firstName)
-                    TextField("Last Name", text: $accountViewModel.lastName)
-                    TextField("Email", text: $accountViewModel.email)
+                    TextField("First Name", text: $accountViewModel.user.firstName)
+                    TextField("Last Name", text: $accountViewModel.user.lastName)
+                    TextField("Email", text: $accountViewModel.user.email)
                         .keyboardType(.emailAddress)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
-                    DatePicker("Birthday", selection: $accountViewModel.birthdate, displayedComponents: .date)
+                    DatePicker("Birthday", selection: $accountViewModel.user.birthdate, displayedComponents: .date)
                     
                     Button {
                         print("Save")
-                        save()
+                        accountViewModel.saveChanges()
                     } label : {
                         Text("Save Changes")
                     }
                 }
                 
                 Section(header: Text("Requests")) {
-                    Toggle("Extra Napkins", isOn: $accountViewModel.extraNapkins)
-                    Toggle("Frequent Refils", isOn: $accountViewModel.frequentRefils)
+                    Toggle("Extra Napkins", isOn: $accountViewModel.user.extraNapkins)
+                    Toggle("Frequent Refils", isOn: $accountViewModel.user.frequentRefils)
                 }
                 .toggleStyle(SwitchToggleStyle(tint: .brandPrimary))
                                 
+            }
+            .onAppear {
+                accountViewModel.retrieveUser()
             }
             .navigationTitle(Text("😀 Account"))
         }
@@ -46,12 +49,7 @@ struct AccountView: View {
         }
     }
     
-    func save() {
-        if accountViewModel.isValidForm {
-            print("Save Pressed")
-        }
-    }
-    
+
 }
 
 #Preview {

@@ -11,22 +11,45 @@ internal import Combine
 
 final class AccountViewModel: ObservableObject {
      
-    @Published  var firstName = ""
-    @Published  var lastName = ""
-    @Published  var email = ""
-    @Published  var birthdate = Date()
-    @Published  var extraNapkins = false
-    @Published  var frequentRefils = false
+    // App Storage
+    @AppStorage("user") private var userData: Data?
         
+    @Published var user = User()
     @Published var alertItem: AlertItem?
     
+    func saveChanges() {
+        guard isValidForm  else { return }
+        
+        // encode user to data
+        do {
+            // Encodes User Data
+            let data = try JSONEncoder().encode(user)
+            userData = data
+            alertItem = AlertContext.userSaveSuccess
+        } catch {
+            alertItem = AlertContext.invalidUserData
+        }
+    }
+    
+    func retrieveUser() {
+        // Check if User Data is not nil
+        guard let userData = userData else { return }
+        do {
+            // Assign data to user
+            user = try JSONDecoder().decode(User.self, from: userData )
+        } catch {
+            alertItem = AlertContext.invalidUserData
+        }
+    }
+    
+    
     var isValidForm: Bool {
-        guard !firstName.isEmpty, !lastName.isEmpty, !email.isEmpty else {
+        guard !user.firstName.isEmpty, !user.lastName.isEmpty, !user.email.isEmpty else {
             alertItem = AlertContext.invalidForm
             return false
         }
         
-        guard email.isValidEmail else {
+        guard user.email.isValidEmail else {
             alertItem = AlertContext.invalidEmail
             return false
         }
