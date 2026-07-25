@@ -34,6 +34,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Screens/AccountView/AccountView.swift,
+				Screens/AccountView/AccountViewModel.swift,
 				Screens/AppetizerListView/AppetizerDetailView.swift,
 				Screens/AppetizerListView/AppetizerListView.swift,
 				Screens/AppetizerListView/AppetizerListViewModel.swift,
@@ -41,6 +42,7 @@
 				Utilities/Alerts/AlertView.swift,
 				Utilities/Alerts/APError.swift,
 				"Utilities/Extensions/Color+Ext.swift",
+				"Utilities/Extensions/String+Ext.swift",
 				Utilities/Managers/NetworkManager.swift,
 				Views/Buttons/APButton.swift,
 				Views/Buttons/XDismissButton.swift,
@@ -54,6 +56,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Screens/AccountView/AccountView.swift,
+				Screens/AccountView/AccountViewModel.swift,
 				Screens/AppetizerListView/AppetizerDetailView.swift,
 				Screens/AppetizerListView/AppetizerListView.swift,
 				Screens/AppetizerListView/AppetizerListViewModel.swift,
@@ -61,6 +64,7 @@
 				Utilities/Alerts/AlertView.swift,
 				Utilities/Alerts/APError.swift,
 				"Utilities/Extensions/Color+Ext.swift",
+				"Utilities/Extensions/String+Ext.swift",
 				Utilities/Managers/NetworkManager.swift,
 				Views/Buttons/APButton.swift,
 				Views/Buttons/XDismissButton.swift,
