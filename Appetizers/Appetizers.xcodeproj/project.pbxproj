@@ -33,6 +33,7 @@
 		CB43A88E2FFEC86E00337B7C /* Exceptions for "Appetizers" folder in "AppetizersTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Model/Order.swift,
 				Model/User.swift,
 				Screens/AccountView/AccountView.swift,
 				Screens/AccountView/AccountViewModel.swift,
@@ -48,6 +49,7 @@
 				Views/Buttons/APButton.swift,
 				Views/Buttons/XDismissButton.swift,
 				Views/Cells/AppetizerListCell.swift,
+				Views/EmptyStates/EmptyState.swift,
 				Views/Image/RemoteImage.swift,
 				"Views/UIKit Components/LoadingView.swift",
 			);
@@ -56,6 +58,7 @@
 		CB43A88F2FFEC86E00337B7C /* Exceptions for "Appetizers" folder in "AppetizersUITests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Model/Order.swift,
 				Model/User.swift,
 				Screens/AccountView/AccountView.swift,
 				Screens/AccountView/AccountViewModel.swift,
@@ -71,6 +74,7 @@
 				Views/Buttons/APButton.swift,
 				Views/Buttons/XDismissButton.swift,
 				Views/Cells/AppetizerListCell.swift,
+				Views/EmptyStates/EmptyState.swift,
 				Views/Image/RemoteImage.swift,
 				"Views/UIKit Components/LoadingView.swift",
 			);
