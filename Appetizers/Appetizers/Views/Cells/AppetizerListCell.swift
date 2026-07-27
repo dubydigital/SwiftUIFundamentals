@@ -11,11 +11,18 @@ struct AppetizerListCell: View {
     let appetizer: Appetizer
     
     var body: some View {
+        
         HStack {
-            AppetizerRemoteImage(urlString: appetizer.imageURL)
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 128, height: 85.1)
-                .cornerRadius(12)
+            ZStack {
+                Color(.brandPrimary)
+                    .frame(width: 136, height: 86)
+                    .cornerRadius(12)
+                
+                AppetizerRemoteImage(urlString: appetizer.imageURL)
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 128, height: 80)
+                    .cornerRadius(12)
+            }
             
 //            Image("sample_img")
 //                .resizable()

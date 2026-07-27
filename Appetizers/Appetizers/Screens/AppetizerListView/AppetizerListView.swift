@@ -16,6 +16,11 @@ struct AppetizerListView: View {
             NavigationView {
                 List(viewModel.appetizers, id: \.id) { appetizer in
                     AppetizerListCell(appetizer: appetizer)
+//                        .listRowSeparator(.hidden)
+//                        .listRowSeparatorTint(.brandPrimary)
+                        .alignmentGuide(.listRowSeparatorLeading) { dimensions in
+                                   dimensions[.leading]
+                               }
                         .onTapGesture {
                             print("tapGesture")
                             viewModel.isShowingDetail = true

@@ -51,6 +51,7 @@
 				Views/Cells/AppetizerListCell.swift,
 				Views/EmptyStates/EmptyState.swift,
 				Views/Image/RemoteImage.swift,
+				"Views/UIKit Components/CustomModifiers.swift",
 				"Views/UIKit Components/LoadingView.swift",
 			);
 			target = CB43A86C2FFEC70000337B7C /* AppetizersTests */;
@@ -76,6 +77,7 @@
 				Views/Cells/AppetizerListCell.swift,
 				Views/EmptyStates/EmptyState.swift,
 				Views/Image/RemoteImage.swift,
+				"Views/UIKit Components/CustomModifiers.swift",
 				"Views/UIKit Components/LoadingView.swift",
 			);
 			target = CB43A8762FFEC70000337B7C /* AppetizersUITests */;
