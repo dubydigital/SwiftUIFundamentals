@@ -30,8 +30,10 @@ struct FrameworkGridView: View {
             .fullScreenCover(isPresented: $viewModel.isShowingDetailView, content: {
 //                MusicListView(isShowingDetailView: $viewModel.isShowingDetailView)
                 
-                FrameworkDetailView(framework: viewModel.selectedFramework ?? MockData.sampleFramework,
+/*                FrameworkDetailView(framework: viewModel.selectedFramework ?? MockData.sampleFramework,
                                     isShowingDetailView: $viewModel.isShowingDetailView)
+ */
+                FrameworkDetailView(viewModel: FrameworkDetailViewModel(framework: viewModel.selectedFramework ?? MockData.sampleFramework, isShowingDetailView: $viewModel.isShowingDetailView) )
             })
         }
     }
