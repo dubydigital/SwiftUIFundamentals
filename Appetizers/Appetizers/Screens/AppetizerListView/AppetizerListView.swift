@@ -31,7 +31,10 @@ struct AppetizerListView: View {
                 .disabled(viewModel.isShowingDetail)
             }
             .onAppear() {
-                viewModel.getAppetizers()
+//                viewModel.getAppetizers()
+            }
+            .task {
+                viewModel.getAppetrizersTask()
             }
             .blur(radius: viewModel.isShowingDetail ? 20 : 0)// Add on NavigationView
             

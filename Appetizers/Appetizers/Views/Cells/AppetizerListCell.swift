@@ -17,13 +17,29 @@ struct AppetizerListCell: View {
                 Color(.brandPrimary)
                     .frame(width: 136, height: 86)
                     .cornerRadius(12)
-                
-                AppetizerRemoteImage(urlString: appetizer.imageURL)
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 128, height: 80)
-                    .cornerRadius(12)
+                // 1. Async Image
+                AsyncImage(url: URL(string: appetizer.imageURL )) { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 128, height: 80)
+                        .cornerRadius(12)
+                } placeholder: {
+                    Image("sample_img")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 128, height: 80)
+                        .cornerRadius(12)
+                }
             }
+//              // 2. Our Custom RemoteImage
+//                AppetizerRemoteImage(urlString: appetizer.imageURL)
+//                    .aspectRatio(contentMode: .fill)
+//                    .frame(width: 128, height: 80)
+//                    .cornerRadius(12)
+//            }
             
+//             // 3. Orignal Image:
 //            Image("sample_img")
 //                .resizable()
 //                .aspectRatio(contentMode: .fit)

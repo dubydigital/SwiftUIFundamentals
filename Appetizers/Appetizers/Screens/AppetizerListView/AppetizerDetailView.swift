@@ -16,8 +16,18 @@ struct AppetizerDetailView: View {
     var body: some View {
         VStack {
             AppetizerRemoteImage(urlString: appetizer.imageURL)
-                .frame(width:300, height: 225)
                 .aspectRatio(contentMode: .fill)
+                .frame(width:300, height: 225)
+                .clipShape(RoundedRectangle(cornerRadius: 0))
+//                .clipShape(
+//                        UnevenRoundedRectangle(
+//                            topLeadingRadius: 12,
+//                            bottomLeadingRadius: 12,
+//                            bottomTrailingRadius: 12,
+//                            topTrailingRadius: 12
+//                        )
+//                    )
+                
             
             VStack {
                 // Title
@@ -70,7 +80,7 @@ struct AppetizerDetailView: View {
 }
 
 #Preview {
-    AppetizerDetailView(appetizer: MockData.sampleAppetizer, isShowingDetail: .constant(false))
+    AppetizerDetailView(appetizer: MockData.sampleAppetizer, isShowingDetail: .constant(true))
 }
 
 // MARK: - Nutritoin Info

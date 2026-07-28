@@ -34,7 +34,7 @@ struct MockData {
                                            name: "Test Appetizer",
                                            description: "Test Decscription. Ze best appetizer zer is. Simply the best. Oui",
                                            price: 10.00,
-                                           imageURL: "",
+                                           imageURL: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1200&q=80",
                                            calories: 2000,
                                            protein: 99,
                                            carbs: 99)

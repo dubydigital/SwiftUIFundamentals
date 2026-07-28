@@ -29,7 +29,7 @@ final class ImageLoader: ObservableObject {
 struct RemoteImage: View {
     var image: Image?
     var body: some View {
-        image?.resizable() ?? Image("DPL_Logo")
+        image?.resizable() ?? Image("DPL_Logo").resizable()
     }
 }
 
