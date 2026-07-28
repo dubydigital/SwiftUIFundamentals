@@ -42,11 +42,11 @@ struct AppetizerDetailView: View {
                 // Calories
                 HStack(spacing: 40) {
                     // Carbs
-                    NutritionInfo(title: "Calories", value: appetizer.calories)
+                    NutritionInfo(title: "Calories", value: "\(appetizer.calories)")
                     // Carbs
-                    NutritionInfo(title: "Carbs", value: appetizer.carbs)
+                    NutritionInfo(title: "Carbs", value:  "\(appetizer.carbs) g")
                     // Protein
-                    NutritionInfo(title: "Protien", value: appetizer.protein)
+                    NutritionInfo(title: "Protien", value: "\(appetizer.protein) g")
                 }
             }
             Spacer()
@@ -86,14 +86,14 @@ struct AppetizerDetailView: View {
 // MARK: - Nutritoin Info
 struct NutritionInfo: View {
     let title: String
-    let value: Int
+    let value: String
     
     var body: some View {
         VStack(spacing: 5){
             Text(title)
                 .bold()
                 .font(.caption)
-            Text("\(value)" )
+            Text(value )
                 .foregroundColor(.secondary)
                 .fontWeight(.semibold)
                 .italic()
